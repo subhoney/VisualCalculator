@@ -4,3 +4,4 @@ C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJo
 C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJoshulator\obj\Debug\App.g.cs
 C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJoshulator\obj\Debug\VisualJoshulator_MarkupCompile.cache
 C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJoshulator\obj\Debug\VisualJoshulator_MarkupCompile.lref
+C:\VisualCalculator\bin\Debug\VisualJoshulator.exe.config
