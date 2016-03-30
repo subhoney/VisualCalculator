@@ -1,0 +1,6 @@
+C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJoshulator\bin\Debug\VisualJoshulator.exe.config
+C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJoshulator\obj\Debug\VisualJoshulator.csprojResolveAssemblyReference.cache
+C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJoshulator\obj\Debug\MainWindow.g.cs
+C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJoshulator\obj\Debug\App.g.cs
+C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJoshulator\obj\Debug\VisualJoshulator_MarkupCompile.cache
+C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJoshulator\obj\Debug\VisualJoshulator_MarkupCompile.lref

@@ -1,0 +1,42 @@
+﻿<Window x:Name="Joshulator" x:Class="VisualJoshulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VisualJoshulator"
+        mc:Ignorable="d"
+        Title="Joshulator" Height="203.667" Width="260.333">
+    <Grid RenderTransformOrigin="0.186,0.196" HorizontalAlignment="Left" Width="250">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnDec" Content="." HorizontalAlignment="Left" Margin="90,120,0,0" VerticalAlignment="Top" Width="35" Grid.Row="1" Height="22" Click="btnDec_Click"/>
+        <Button x:Name="btn2" Content="2" HorizontalAlignment="Left" Margin="50,93,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Grid.Row="1" Height="22" Click="btn2_Click"/>
+        <Button x:Name="btn1" Content="1" HorizontalAlignment="Left" Margin="10,93,0,0" VerticalAlignment="Top" Width="35" Grid.Row="1" Height="22" Click="btn1_Click"/>
+        <Button x:Name="btn3" Content="3" HorizontalAlignment="Left" Margin="90,93,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Grid.Row="1" Height="22" Click="btn3_Click"/>
+        <Button x:Name="btn4" Content="4" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Grid.Row="1" Height="22" Click="btn4_Click"/>
+        <Button x:Name="btn6" Content="6" HorizontalAlignment="Left" Margin="90,66,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Grid.Row="1" Height="22" Click="btn6_Click"/>
+        <Button x:Name="btn5" Content="5" HorizontalAlignment="Left" Margin="50,66,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Grid.Row="1" Height="22" Click="btn5_Click"/>
+        <Button x:Name="btn8" Content="8" HorizontalAlignment="Left" Margin="50,39,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Grid.Row="1" Height="22" Click="btn8_Click"/>
+        <Button x:Name="btn7" Content="7" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top" Width="35" Grid.Row="1" Height="22" Click="btn7_Click"/>
+        <Button x:Name="btn9" Content="9" HorizontalAlignment="Left" Margin="90,39,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Grid.Row="1" Height="22"/>
+        <Button x:Name="btnAdd" Content="+" HorizontalAlignment="Left" Margin="130,39,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Grid.Row="1" Click="btnAdd_Click"/>
+        <Button x:Name="btnMultiply" Content="*" HorizontalAlignment="Left" Margin="130,93,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Grid.Row="1" Click="btnMultiply_Click"/>
+        <Button x:Name="btnDivide" Content="/" HorizontalAlignment="Left" Margin="170,93,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Grid.Row="1"/>
+        <Button x:Name="btnSubtract" Content="-" HorizontalAlignment="Left" Margin="170,39,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Grid.Row="1" Click="btnSubtract_Click"/>
+        <Button x:Name="btnMod" Content="%" HorizontalAlignment="Left" Margin="210,39,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Grid.Row="1" Click="btnMod_Click"/>
+        <Button x:Name="btnPower" Content="x^y" HorizontalAlignment="Left" Margin="210,93,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Click="button1_Copy14_Click" Grid.Row="1"/>
+        <Button x:Name="btn0" Content="0" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Height="22" Click="btn0_Click"/>
+        <Button x:Name="btnEnter" Content="Enter" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top" Width="235" Grid.Row="1" Height="22" Click="btnEnter_Click"/>
+        <TextBlock x:Name="txtDisplay" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" Grid.RowSpan="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="235" Foreground="{x:Null}">
+            <TextBlock.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FFD8CACA" Offset="1"/>
+                    <GradientStop Color="White" Offset="0.23"/>
+                </RadialGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+
+    </Grid>
+</Window>
