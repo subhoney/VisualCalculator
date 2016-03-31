@@ -23,6 +23,7 @@ namespace VisualJoshulator
     /// </summary>
     public partial class MainWindow : Window
     {
+        public enum Operations { Multiply, Divide, Add, Subtract, Modulo, Pow, Equals, LastOp, Start }; 
         public MainWindow()
         {
             InitializeComponent();  
