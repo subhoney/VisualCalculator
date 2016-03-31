@@ -1,19 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using VisualJoshulator.Control;
-using VisualJoshulator.Model;
 
 
 namespace VisualJoshulator
@@ -23,10 +10,15 @@ namespace VisualJoshulator
     /// </summary>
     public partial class MainWindow : Window
     {
-        public enum Operations { Multiply, Divide, Add, Subtract, Modulo, Pow, Equals, LastOp, Start }; 
+        bool isNewEntry = false;
+        double currentValue = 0; 
+        enum Operation { Multiply, Divide, Add, Subtract, Modulo, Pow, Equals, LastOp, Start };
+        Operation currentOp = Operation.Start;
+
         public MainWindow()
         {
-            InitializeComponent();  
+            InitializeComponent();
+            textDisplay.Text = "Welcome to the Calculator.";
         }
 
         private void click_Click(object sender, RoutedEventArgs e)
