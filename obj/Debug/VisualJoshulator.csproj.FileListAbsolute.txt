@@ -5,3 +5,16 @@ C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJo
 C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJoshulator\obj\Debug\VisualJoshulator_MarkupCompile.cache
 C:\SVN\workspace\Lynda.com C#\Exercise Files\10_Visual\VisualJoshulator\VisualJoshulator\obj\Debug\VisualJoshulator_MarkupCompile.lref
 C:\VisualCalculator\bin\Debug\VisualJoshulator.exe.config
+C:\VisualCalculator\obj\Debug\VisualJoshulator.csprojResolveAssemblyReference.cache
+C:\VisualCalculator\obj\Debug\MainWindow.g.cs
+C:\VisualCalculator\obj\Debug\App.g.cs
+C:\VisualCalculator\obj\Debug\VisualJoshulator_MarkupCompile.cache
+C:\VisualCalculator\obj\Debug\VisualJoshulator_MarkupCompile.lref
+C:\VisualCalculator\bin\Debug\VisualJoshulator.exe
+C:\VisualCalculator\bin\Debug\VisualJoshulator.pdb
+C:\VisualCalculator\obj\Debug\MainWindow.baml
+C:\VisualCalculator\obj\Debug\VisualJoshulator.g.resources
+C:\VisualCalculator\obj\Debug\VisualJoshulator.Properties.Resources.resources
+C:\VisualCalculator\obj\Debug\VisualJoshulator.csproj.GenerateResource.Cache
+C:\VisualCalculator\obj\Debug\VisualJoshulator.exe
+C:\VisualCalculator\obj\Debug\VisualJoshulator.pdb

@@ -10,20 +10,57 @@ namespace VisualJoshulator
     /// </summary>
     public partial class MainWindow : Window
     {
-        bool isNewEntry = false;
-        double currentValue = 0; 
+        bool isNewEntry = true;
+        double currentValue = 0;
         enum Operation { Multiply, Divide, Add, Subtract, Modulo, Pow, Equals, LastOp, Start };
         Operation currentOp = Operation.Start;
 
         public MainWindow()
         {
             InitializeComponent();
-            txtDisplay.Text = "Welcome to the Calculator.";
+            txtDisplay.Text = currentValue.ToString();
         }
 
-        private void click_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Takes button entry args, parses. 
+        /// </summary>
+        /// <param name="sender">Self-ref.</param>
+        /// <param name="routedArgs">The event arguments.</param>
+        private void btnEntry_Click(object sender, RoutedEventArgs routedArgs)
         {
-          
+            //dummy value for trying to parse the entry string
+            int result;
+
+            //Get the value from the button label
+            Button btn = (Button)sender;
+            string value = btn.Content.ToString();
+
+            //special handling for decimal point
+            if (value.Equals("."))
+            {
+                if (isNewEntry)
+                {
+                    return;
+                }
+                if (!txtDisplay.Text.Contains("."))
+                {
+                    txtDisplay.Text += value;
+                    isNewEntry = false;
+                }
+                return;
+            }
+
+            //try to parse entry as int; 
+            //if successful, append to current entry
+            if (Int32.TryParse(value, out result))
+            {
+                if (isNewEntry || txtDisplay.Text.Equals("0"))
+                {
+                    txtDisplay.Text = "";
+                }
+                txtDisplay.Text += value;
+                isNewEntry = false;
+            }
         }
 
         /// <summary>
@@ -41,7 +78,7 @@ namespace VisualJoshulator
                 currentOp = op;
             }
 
-            switch (op)
+            switch (currentOp)
             {
                 case Operation.Multiply:
                     result = currentValue * newValue;
@@ -84,7 +121,47 @@ namespace VisualJoshulator
             currentValue = result;
             txtDisplay.Text = result.ToString();
             isNewEntry = true;
-
         }
+
+        #region event handlers
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate(Operation.Add);
+        }
+        private void btnSubtract_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate(Operation.Subtract);
+        }
+        private void btnMultiply_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate(Operation.Multiply);
+        }
+        private void btnDivide_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate(Operation.Divide);
+        }
+        private void btnPow_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate(Operation.Pow);
+        }
+        private void btnMod_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate(Operation.Modulo);
+        }
+
+        //Clear the current results
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            txtDisplay.Text = "0";
+            currentValue = 0;
+            isNewEntry = true;
+        }
+
+        //Handle the Equals button
+        private void btnEnter_Click(object sender, RoutedEventArgs e)
+        {
+            Calculate(Operation.LastOp);
+        }
+        #endregion event handlers
     }
 }
