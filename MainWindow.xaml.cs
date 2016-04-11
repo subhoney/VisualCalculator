@@ -29,7 +29,7 @@ namespace VisualJoshulator
         private void btnEntry_Click(object sender, RoutedEventArgs routedArgs)
         {
             //dummy value for trying to parse the entry string
-            int result;
+            int result; // leave empty 
 
             //Get the value from the button label
             Button btn = (Button)sender;
@@ -81,25 +81,42 @@ namespace VisualJoshulator
             switch (currentOp)
             {
                 case Operation.Multiply:
-                    result = currentValue * newValue;
+                    if (currentValue == 0)
+                    {
+                        result = newValue;
+                    }
+                    else
+                    {
+                        result = currentValue * newValue;
+                    }
                     break;
+
                 case Operation.Divide:
                     if (newValue == 0)
                     {
-                        txtDisplay.Text = "Div by 0!";
-                        return; // note the return
+                        txtDisplay.Text = "#DIV/0";
+                        return;
+                    }
+                    else if (currentValue == 0)
+                    {
+                        currentValue = newValue;
+                        txtDisplay.Text = ""; // must be zero or empty string because of concatenation later in the calculator - jbroughton
+                        return;
                     }
                     else
                     {
                         result = currentValue / newValue;
                     }
                     break;
+
                 case Operation.Add:
                     result = currentValue + newValue;
                     break;
+
                 case Operation.Subtract:
                     result = currentValue - newValue;
                     break;
+
                 case Operation.Modulo:
                     if (newValue == 0)
                     {
@@ -107,13 +124,20 @@ namespace VisualJoshulator
                     }
                     result = currentValue % newValue;
                     break;
+
                 case Operation.Pow:
-                    if (newValue == 0)
+                    if (currentValue == 0)
                     {
-                        result = 1;
+                        currentValue = newValue;
+                        txtDisplay.Text = ""; // must be zero or empty string because of concatenation later in the calculator - jbroughton
+                        return;
                     }
-                    result = Math.Pow(currentValue, newValue);
+                    else
+                    {
+                        result = Math.Pow(currentValue, newValue);
+                    }
                     break;
+
                 default:
                     return;
             }
