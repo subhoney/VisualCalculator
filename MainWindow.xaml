@@ -25,7 +25,7 @@
         <Button x:Name="btnMultiply" Content="*" HorizontalAlignment="Left" Margin="130,123,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Grid.Row="1" Click="btnMultiply_Click"/>
         <Button x:Name="btnDivide" Content="/" HorizontalAlignment="Left" Margin="170,123,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Grid.Row="1" Click="btnDivide_Click"/>
         <Button x:Name="btnSubtract" Content="-" HorizontalAlignment="Left" Margin="170,69,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Grid.Row="1" Click="btnSubtract_Click"/>
-        <Button x:Name="btnMod" Content="%" HorizontalAlignment="Left" Margin="210,69,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Grid.Row="1" Click="btnMod_Click"/>
+        <Button x:Name="btnMod" Content="Mod" HorizontalAlignment="Left" Margin="210,69,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Grid.Row="1" Click="btnMod_Click"/>
         <Button x:Name="btnPow" Content="x^y" HorizontalAlignment="Left" Margin="210,123,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="0.795,0.286" Height="49" Click="btnPow_Click" Grid.Row="1"/>
         <Button x:Name="btn0" Content="0" HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="75" Grid.Row="1" Height="22" Click="btnEntry_Click"/>
         <Button x:Name="btnEnter" Content="Enter" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top" Width="235" Grid.Row="1" Height="22" Click="btnEnter_Click"/>

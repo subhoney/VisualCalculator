@@ -118,11 +118,16 @@ namespace VisualJoshulator
                     break;
 
                 case Operation.Modulo:
-                    if (newValue == 0)
+                    if (currentValue == 0)
                     {
-                        result = currentValue; // mathmatical inconsisty: anyting mod zero is either zero or itself. jcbroughton
+                        currentValue = newValue;
+                        txtDisplay.Text = ""; // must be zero or empty string because of concatenation later in the calculator - jbroughton
+                        return;
                     }
-                    result = currentValue % newValue;
+                    else
+                    {
+                        result = currentValue % newValue;
+                    }
                     break;
 
                 case Operation.Pow:
