@@ -72,6 +72,17 @@ namespace VisualJoshulator
         {
             double newValue = Double.Parse(txtDisplay.Text);
             double result; // leave this empty. jcbroughton
+            bool initEntry = true;
+
+            if (isNewEntry)
+            {
+                currentValue = 0;
+            }
+
+            else
+            {
+                result = currentValue;
+            }
 
             if (op != Operation.LastOp)
             {
@@ -83,8 +94,9 @@ namespace VisualJoshulator
                 case Operation.Multiply:
                     if (currentValue == 0)
                     {
-                        result = newValue;
+                        result = 0;
                     }
+
                     else
                     {
                         result = currentValue * newValue;
@@ -110,11 +122,24 @@ namespace VisualJoshulator
                     break;
 
                 case Operation.Add:
-                    result = currentValue + newValue;
+                    if (currentValue == 0)
+                    {
+                        result = newValue;
+                    }
+                    else
+                    {
+                        result = currentValue + newValue;
+                    }
                     break;
-
                 case Operation.Subtract:
-                    result = currentValue - newValue;
+                    if (currentValue == 0)
+                    {
+                        result = newValue - (2 * newValue);
+                    }
+                    else
+                    {
+                        result = currentValue - newValue;
+                    }
                     break;
 
                 case Operation.Modulo:
@@ -146,7 +171,7 @@ namespace VisualJoshulator
                 default:
                     return;
             }
-
+            initEntry = false;
             currentValue = result;
             txtDisplay.Text = result.ToString();
             isNewEntry = true;
