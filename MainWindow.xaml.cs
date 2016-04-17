@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-
+using System.Collections.Generic;
 
 namespace VisualJoshulator
 {
@@ -10,10 +10,15 @@ namespace VisualJoshulator
     /// </summary>
     public partial class MainWindow : Window
     {
+
         bool isNewEntry = true;
+        List<Double> entries = new List<Double>();
         double currentValue = 0;
         enum Operation { Multiply, Divide, Add, Subtract, Modulo, Pow, Equals, LastOp, Start };
         Operation currentOp = Operation.Start;
+        private double memValue = 0;
+        private int signFlag = 0;
+        private Operation enterOP = Operation.Start;
 
         public MainWindow()
         {
@@ -34,6 +39,7 @@ namespace VisualJoshulator
             //Get the value from the button label
             Button btn = (Button)sender;
             string value = btn.Content.ToString();
+            signFlag = 0;
 
             //special handling for decimal point
             if (value.Equals("."))
@@ -54,8 +60,9 @@ namespace VisualJoshulator
             //if successful, append to current entry
             if (Int32.TryParse(value, out result))
             {
-                if (isNewEntry || txtDisplay.Text.Equals("0"))
+                if (isNewEntry)
                 {
+                    
                     txtDisplay.Text = "";
                 }
                 txtDisplay.Text += value;
@@ -70,137 +77,143 @@ namespace VisualJoshulator
         /// <seealso cref="Operation"/>
         private void Calculate(Operation op)
         {
-            double newValue = Double.Parse(txtDisplay.Text);
             double result; // leave this empty. jcbroughton
-            bool initEntry = true;
+            entries.Add(Double.Parse(txtDisplay.Text));
+           
 
-            if (isNewEntry)
+
+            if (entries.Count > 1)
             {
-                currentValue = 0;
-            }
+                
+            
+            if (op == Operation.LastOp)
+            {
+                    if (signFlag < 1)
+                    {
+                        memValue = entries[1];
+                    }
 
+                    entries.Insert(1, memValue);
+                }    
+                switch (enterOP)
+                {
+                    case Operation.Multiply:
+                     
+                            result = entries[0] * entries[1];
+                        
+                        break;
+
+                    case Operation.Divide:
+                        if (entries[1].Equals(0))
+                        {
+                            txtDisplay.Text = "#DIV/0";
+                            return;
+                        }
+                        
+                        else
+                        {
+                            result = entries[0] / entries[1];
+                        }
+                        break;
+
+                    case Operation.Add:
+
+                        result = entries[0] + entries[1];
+
+                        break;
+                    case Operation.Subtract:
+                       
+
+                            result = entries[0] - entries[1];
+                        
+                        break;
+
+                    case Operation.Modulo:
+                       
+                            result = entries[0] % entries[1];
+                        
+                        break;
+
+                    case Operation.Pow:
+                       
+                            result = Math.Pow(entries[0], entries[1]);
+                        
+                        break;
+
+                    default:
+                        return;
+                }           
+                txtDisplay.Text = result.ToString();
+                isNewEntry = true;
+                memValue = entries[1];
+                entries.Clear();
+                entries.Add(result);
+                signFlag = 1;
+
+            }
             else
             {
-                result = currentValue;
-            }
-
-            if (op != Operation.LastOp)
-            {
+                isNewEntry = true;
                 currentOp = op;
-            }
-
-            switch (currentOp)
-            {
-                case Operation.Multiply:
-                    if (currentValue == 0)
-                    {
-                        result = 0;
-                    }
-
-                    else
-                    {
-                        result = currentValue * newValue;
-                    }
-                    break;
-
-                case Operation.Divide:
-                    if (newValue == 0)
-                    {
-                        txtDisplay.Text = "#DIV/0";
-                        return;
-                    }
-                    else if (currentValue == 0)
-                    {
-                        currentValue = newValue;
-                        txtDisplay.Text = ""; // must be zero or empty string because of concatenation later in the calculator - jbroughton
-                        return;
-                    }
-                    else
-                    {
-                        result = currentValue / newValue;
-                    }
-                    break;
-
-                case Operation.Add:
-                    if (currentValue == 0)
-                    {
-                        result = newValue;
-                    }
-                    else
-                    {
-                        result = currentValue + newValue;
-                    }
-                    break;
-                case Operation.Subtract:
-                    if (currentValue == 0)
-                    {
-                        result = newValue - (2 * newValue);
-                    }
-                    else
-                    {
-                        result = currentValue - newValue;
-                    }
-                    break;
-
-                case Operation.Modulo:
-                    if (currentValue == 0)
-                    {
-                        currentValue = newValue;
-                        txtDisplay.Text = ""; // must be zero or empty string because of concatenation later in the calculator - jbroughton
-                        return;
-                    }
-                    else
-                    {
-                        result = currentValue % newValue;
-                    }
-                    break;
-
-                case Operation.Pow:
-                    if (currentValue == 0)
-                    {
-                        currentValue = newValue;
-                        txtDisplay.Text = ""; // must be zero or empty string because of concatenation later in the calculator - jbroughton
-                        return;
-                    }
-                    else
-                    {
-                        result = Math.Pow(currentValue, newValue);
-                    }
-                    break;
-
-                default:
-                    return;
-            }
-            initEntry = false;
-            currentValue = result;
-            txtDisplay.Text = result.ToString();
-            isNewEntry = true;
+                signFlag = 1;
+            } 
         }
 
         #region event handlers
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Calculate(Operation.Add);
+            
+            if (signFlag < 1)
+            {
+                Calculate(enterOP);
+            }
+            enterOP = Operation.Add;
+
         }
         private void btnSubtract_Click(object sender, RoutedEventArgs e)
         {
-            Calculate(Operation.Subtract);
+           
+            if (signFlag < 1)
+            {
+                Calculate(enterOP);
+            }
+            enterOP = Operation.Subtract;
         }
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
         {
-            Calculate(Operation.Multiply);
+            
+            if (signFlag < 1)
+            {
+                Calculate(enterOP);
+            }
+            enterOP = Operation.Multiply;
         }
         private void btnDivide_Click(object sender, RoutedEventArgs e)
         {
-            Calculate(Operation.Divide);
+            
+            if (signFlag < 1)
+            {
+                Calculate(enterOP);
+            }
+            enterOP = Operation.Divide;
         }
         private void btnPow_Click(object sender, RoutedEventArgs e)
         {
-            Calculate(Operation.Pow);
+            
+            if (signFlag < 1)
+            {
+                Calculate(enterOP);
+            }
+            enterOP = Operation.Pow;
         }
         private void btnMod_Click(object sender, RoutedEventArgs e)
         {
-            Calculate(Operation.Modulo);
+            
+            if (signFlag < 1)
+            {
+                Calculate(enterOP);
+            }
+            enterOP = Operation.Modulo;
         }
 
         //Clear the current results
@@ -209,12 +222,16 @@ namespace VisualJoshulator
             txtDisplay.Text = "0";
             currentValue = 0;
             isNewEntry = true;
+            entries.Clear();
+            signFlag = 0;
         }
 
         //Handle the Equals button
         private void btnEnter_Click(object sender, RoutedEventArgs e)
         {
+            
             Calculate(Operation.LastOp);
+
         }
         #endregion event handlers
     }

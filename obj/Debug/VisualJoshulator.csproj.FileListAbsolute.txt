@@ -18,3 +18,45 @@ C:\VisualCalculator\obj\Debug\VisualJoshulator.Properties.Resources.resources
 C:\VisualCalculator\obj\Debug\VisualJoshulator.csproj.GenerateResource.Cache
 C:\VisualCalculator\obj\Debug\VisualJoshulator.exe
 C:\VisualCalculator\obj\Debug\VisualJoshulator.pdb
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\bin\Debug\VisualJoshulator.exe.config
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\bin\Debug\VisualJoshulator.exe
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\bin\Debug\VisualJoshulator.pdb
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.csprojResolveAssemblyReference.cache
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\MainWindow.g.cs
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\App.g.cs
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator_MarkupCompile.cache
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator_MarkupCompile.lref
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\MainWindow.baml
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.g.resources
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.Properties.Resources.resources
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.csproj.GenerateResource.Cache
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.exe
+C:\Users\james\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.pdb
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\bin\Debug\VisualJoshulator.exe.config
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.exe
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.pdb
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.csprojResolveAssemblyReference.cache
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\MainWindow.g.cs
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\App.g.cs
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator_MarkupCompile.cache
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator_MarkupCompile.lref
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\bin\Debug\VisualJoshulator.exe
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\bin\Debug\VisualJoshulator.pdb
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\MainWindow.baml
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.g.resources
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.Properties.Resources.resources
+C:\Users\Kenny\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.csproj.GenerateResource.Cache
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\bin\Debug\VisualJoshulator.exe.config
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.exe
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.pdb
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\bin\Debug\VisualJoshulator.exe
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\bin\Debug\VisualJoshulator.pdb
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.csprojResolveAssemblyReference.cache
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\MainWindow.g.cs
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\App.g.cs
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator_MarkupCompile.cache
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator_MarkupCompile.lref
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\MainWindow.baml
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.g.resources
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.Properties.Resources.resources
+C:\Users\Kenny Jr\OneDrive\Dev\visualstudio\VisualCalculator\obj\Debug\VisualJoshulator.csproj.GenerateResource.Cache
